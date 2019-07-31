@@ -27,3 +27,14 @@ The web application should include the following functionality:
 - Bookmarked recipes view
     - List of all bookmarked recipes.
     - Button to remove recipes from the list.
+
+## Getting started
+
+This repository is setup with `create-react-app` to get you started quickly. To start the app you just need to clone the repository and run the following commands:
+
+```sh
+# install node_modules
+yarn
+# start the app
+yarn start
+```
