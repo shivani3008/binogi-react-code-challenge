@@ -9,6 +9,14 @@ This code test involves the creation of a working React app using a 3rd party AP
 - Feel free to use any libraries/plugins you can find.
 - You should focus on code quality and structure.
 
+#### Optional
+
+- Setup a Redux/Mobx store to store and manage state
+- Use Redux/Mobx at least for handling bookmarks
+- Use `localStorage` as a persistence layer for the Redux store
+- Use TypeScript
+- Write some unit-tests
+
 ## The challenge
 
 Create a React web application for searching through the cooking recipes using the public API and implement a solution for bookmarking the recipes on client-side using `localStorage`. 
