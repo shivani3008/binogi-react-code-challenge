@@ -10,7 +10,7 @@
 .header {
   grid-area: header;
   padding: 1em;
-  background-color: darkslateblue;
+  background-color: #666;
   color: white;
   text-align: center;
   font-weight: bold;
@@ -18,7 +18,7 @@
 
 .sidebar {
   grid-area: sidebar;
-  background-color: skyblue;
+  background-color: #ccc;
   padding: 1em;
 }
 
