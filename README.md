@@ -31,7 +31,7 @@ The web application should include the following functionality:
 
 - The app must be built using React.
 - Feel free to use any libraries/plugins that you need.
-- Try to make the UI look “nice enough”.
+- Try to make the UI look “nice enough”. You can scrap and replace the existing UI completely if you want.
 - Focus on code quality and structure.
 
 ### Optional:
