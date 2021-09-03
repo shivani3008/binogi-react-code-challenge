@@ -2,6 +2,8 @@
 
 This code test involves the creation of a working React app using a 3rd party API. It’s designed to take 2-4 hours.
 
+![Screenshot of Binogi React Code Challenge](screenshot.png)
+
 ## The Challenge
 
 Create a React web application for searching through the recipes using the public API, and implement a solution for bookmarking the recipes client-side.
