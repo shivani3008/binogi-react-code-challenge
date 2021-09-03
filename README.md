@@ -34,11 +34,12 @@ The web application should include the following functionality:
 
 ### Optional:
 
-- Implement a solution to store and manage state
+- Implement a solution to store and manage the app’s state
 	- Use state at least for handling bookmarks
 - Use `localStorage` as a persistence layer for the state
 - Use TypeScript
 - Write some unit-tests
+- Make it look good on mobile as well as desktop
 
 ## Getting started
 
