@@ -30,7 +30,7 @@ The web application should include the following functionality:
 ## Requirements and Restrictions
 
 - The app must be built using React.
-- Feel free to use any libraries/plugins you can find.
+- Feel free to use any libraries/plugins that you need.
 - Try to make the UI look “nice enough”.
 - Focus on code quality and structure.
 
