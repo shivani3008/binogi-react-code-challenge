@@ -6,7 +6,7 @@ This code test involves the creation of a working React app using a 3rd party AP
 
 Create a React web application for searching through the cooking recipes using the public API and implement a solution for bookmarking the recipes client-side.
 
-The public recipes API is called [Edamam Recipe Search API](https://developer.edamam.com/edamam-docs-recipe-api). You can signup for a developer account [here](https://developer.edamam.com/admin/applications/1409618537930).
+The public recipes API is called [Edamam Recipe Search API](https://developer.edamam.com/edamam-docs-recipe-api). For the API, you can use our account with Application ID: `df53c267` and Application Key: `bd80595496a524a833554462aa41a04c` (you can also create your own account).
 
 The web application should include the following functionality:
 
