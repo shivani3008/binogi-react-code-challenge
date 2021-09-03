@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        Recipe Search
+        The Recipe Collection
       </header>
 
       <nav className="sidebar">
