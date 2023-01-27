@@ -13,7 +13,7 @@ const Recipes = () => {
           q: 'chicken',
         });
 
-        setRecipesData(hits.map((hit) => hit.recipe));
+        setRecipesData(hits.map((hit) => ({ ...hit.recipe, id: hit.recipe.uri.split('#recipe_')?.[1] })));
       } catch (error) {
         console.log(error);
       }
@@ -24,8 +24,8 @@ const Recipes = () => {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
-      {recipesData.map((recipe, index) => (
-        <div className="flex-1 flex" key={index}>
+      {recipesData.map((recipe) => (
+        <div className="flex-1 flex" key={recipe.id}>
           <RecipeItem recipe={recipe} />
         </div>
       ))}
