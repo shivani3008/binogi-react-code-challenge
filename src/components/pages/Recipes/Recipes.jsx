@@ -2,9 +2,13 @@ import React, { useEffect, useState } from 'react';
 
 import { fetchRecipes } from 'api/recipe';
 import RecipeItem from 'components/common/RecipeItem';
+import Modal from 'components/patterns/Modal';
+
+import RecipeDetails from './RecipeDetails';
 
 const Recipes = () => {
   const [recipesData, setRecipesData] = useState([]);
+  const [openRecipe, setOpenRecipe] = useState(null);
 
   useEffect(() => {
     const getRecipesData = async () => {
@@ -23,12 +27,17 @@ const Recipes = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
-      {recipesData.map((recipe) => (
-        <div className="flex-1 flex" key={recipe.id}>
-          <RecipeItem recipe={recipe} />
-        </div>
-      ))}
+    <div>
+      <Modal isOpen={!!openRecipe} onClose={() => setOpenRecipe(null)} showCloseButton>
+        {openRecipe ? <RecipeDetails recipe={openRecipe} /> : null}
+      </Modal>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
+        {recipesData.map((recipe) => (
+          <div key={recipe.id} className="flex-1 flex" onClick={() => setOpenRecipe(recipe)}>
+            <RecipeItem recipe={recipe} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

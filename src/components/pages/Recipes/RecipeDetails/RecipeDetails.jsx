@@ -5,10 +5,9 @@ import SVG from 'react-inlinesvg';
 import bookmarkBlack from 'assets/icons/bookmark_black_24dp.svg';
 import bookmarkBorderBlack from 'assets/icons/bookmark_border_black_24dp.svg';
 import { formatList } from 'utils/formatList';
-import Card from 'components/common/Card';
 import LocalStorage from 'modules/localStorage';
 
-const RecipeItem = ({ recipe: { id, image, label, calories, dietLabels, healthLabels } }) => {
+const RecipeDetails = ({ recipe: { id, image, label, calories, dietLabels, healthLabels } }) => {
   const [isBookmarked, setIsBookmarked] = useState(LocalStorage.isBookmarked(id));
 
   const toggleBookmark = () => {
@@ -17,31 +16,31 @@ const RecipeItem = ({ recipe: { id, image, label, calories, dietLabels, healthLa
   };
 
   return (
-    <Card>
-      <div className="rounded-xl p-3 text-xs cursor-pointer">
-        <img src={image} alt={label} className="rounded-lg w-full" />
+    <div className="text-xs grid grid-cols-2 gap-3">
+      <img src={image} alt={label} className="rounded-lg w-full" />
+      <div>
         <div className="mt-2 flex justify-between items-center">
-          <div className="text-sm truncate font-semibold" title={label}>
+          <div className="text-lg truncate font-semibold" title={label}>
             {label}
           </div>
           <button type="button" onClick={toggleBookmark} title="Bookmark">
             <SVG src={isBookmarked ? bookmarkBlack : bookmarkBorderBlack} className="h-5 w-5" />
           </button>
         </div>
-        <div className="grid grid-cols-2">
+        <div className="mt-2 grid grid-cols-2 text-md gap-2">
           <p>Calories</p>
           <p>{parseInt(calories)}</p>
           <p>Diet Labels</p>
-          <p>{formatList(dietLabels, 3)}</p>
+          <p>{formatList(dietLabels)}</p>
           <p>Health Labels</p>
-          <p>{formatList(healthLabels, 3)}</p>
+          <p>{formatList(healthLabels)}</p>
         </div>
       </div>
-    </Card>
+    </div>
   );
 };
 
-RecipeItem.propTypes = {
+RecipeDetails.propTypes = {
   recipe: PropTypes.shape({
     id: PropTypes.string,
     image: PropTypes.string,
@@ -52,8 +51,8 @@ RecipeItem.propTypes = {
   }),
 };
 
-RecipeItem.defaultProps = {
+RecipeDetails.defaultProps = {
   recipe: {},
 };
 
-export default RecipeItem;
+export default RecipeDetails;
