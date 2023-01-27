@@ -9,6 +9,11 @@ const menuItemsConfig = [
     text: 'Search recipes',
     path: '/recipes',
   },
+  {
+    id: 2,
+    text: 'Bookmarked recipes',
+    path: '/recipes?bookmarked=true',
+  },
 ];
 
 const SidebarMenu = () => {
