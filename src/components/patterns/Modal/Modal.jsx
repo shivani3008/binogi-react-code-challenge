@@ -14,6 +14,7 @@ const Modal = ({ isOpen, onClose, children, showCloseButton }) => {
       onRequestClose={onClose}
       overlayClassName="bg-[#00000060]"
       className="bg-white absolute transform -translate-y-2/4 -translate-x-2/4 top-1/2 left-1/2 rounded-md w-9/12 md:w-6/12 lg:w-125"
+      ariaHideApp={false}
     >
       <div className="flex max-h-[80vh]">
         {showCloseButton ? (
