@@ -4,7 +4,7 @@
   /* 2 columns * 2 rows = 2 areas */
   grid-template-columns: 1fr 3fr;
   grid-template-rows: auto 1fr;
-  grid-template-areas: "header header" "sidebar content";
+  grid-template-areas: 'header header' 'sidebar content';
 }
 
 .header {
@@ -14,12 +14,6 @@
   color: white;
   text-align: center;
   font-weight: bold;
-}
-
-.sidebar {
-  grid-area: sidebar;
-  background-color: #ccc;
-  padding: 1em;
 }
 
 .content {

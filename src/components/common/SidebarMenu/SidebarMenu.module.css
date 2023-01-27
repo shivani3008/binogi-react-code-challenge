@@ -1,0 +1,9 @@
+.sidebar {
+  grid-area: sidebar;
+  background-color: #ccc;
+  padding: 1em;
+}
+
+.sidebarItem {
+  cursor: pointer;
+}
